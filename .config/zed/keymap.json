@@ -1,0 +1,87 @@
+[
+  {
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-a": "project_panel::ToggleFocus",
+      "cmd-s": "agent::ToggleFocus",
+      "cmd-x": "diagnostics::Deploy"
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {}
+  },
+  {
+    "context": "VimControl && !menu",
+    "bindings": {
+      // normal & visual mode.
+      "ctrl-s": "editor::SelectAll",
+      "ctrl-j": "workspace::ActivatePaneDown",
+      "ctrl-k": "workspace::ActivatePaneUp",
+      "ctrl-l": "workspace::ActivatePaneRight",
+      "ctrl-h": "workspace::ActivatePaneLeft",
+      "alt-k": "editor::MoveLineUp",
+      "alt-j": "editor::MoveLineDown",
+      "right": "pane::SplitVertical",
+      "down": "pane::SplitHorizontal",
+      "left": "workspace::Save",
+      "up": "pane::CloseActiveItem",
+      "space space": "file_finder::Toggle",
+      "space /": "pane::DeploySearch",
+      "space .": "search::ToggleReplace",
+      "space ,": "tab_switcher::Toggle",
+      "ctrl-]": "pane::ActivateNextItem",
+      "ctrl-[": "pane::ActivatePreviousItem",
+      "enter": "editor::SelectLargerSyntaxNode",
+      "backspace": "editor::SelectSmallerSyntaxNode",
+      ";": [
+        "workspace::SendKeystrokes",
+        ":"
+      ]
+      // "cmd-v": [
+      //   "workspace::SendKeystrokes",
+      //   "cmd-j shift-escape g g enter"
+      // ]
+    }
+  },
+  {
+    "context": "vim_mode == normal && !menu",
+    "bindings": {}
+  },
+  {
+    "context": "vim_mode == insert",
+    "bindings": {
+      "k j": [
+        "workspace::SendKeystrokes",
+        "escape : w enter"
+      ]
+    }
+  },
+  {
+    // comment to test git mappingsl
+    "context": "EmptyPane || SharedScreen",
+    "bindings": {
+      // Put key bindings here (in addition to the context above) if you want them to
+      // work when no editor exists.
+      "space space": "file_finder::Toggle",
+      "ctrl-l": "workspace::ToggleRightDock"
+    }
+  },
+  {
+    "context": "FileFinder || (FileFinder > Picker > Editor) || (FileFinder > Picker > menu)",
+    "use_key_equivalents": true,
+    "bindings": {
+      "cmd-shift-p": "file_finder::SelectPrevious",
+      "cmd-j": "pane::SplitDown",
+      "cmd-k": "pane::SplitUp",
+      "ctrl-h": "pane::SplitLeft",
+      "ctrl-v": "pane::SplitRight"
+    }
+  }
+]

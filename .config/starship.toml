@@ -1,0 +1,101 @@
+format = '$directory$git_branch$character'
+right_format = "$time$battery"
+# Battery module: Shows battery percentage and status (e.g., 🔋 85% or 🔌 Charging)
+[battery]
+disabled = false  # Enable the module
+full_symbol = "🔋"  # Symbol for full battery
+charging_symbol = "🔌"  # Symbol for charging
+discharging_symbol = "⚡"  # Symbol for discharging
+unknown_symbol = "?"  # Symbol for unknown state
+empty_symbol = "💀"  # Symbol for empty battery
+format = "[$symbol$percentage]($style) "  # Format: e.g., "🔋 85% "
+# Display styling based on battery percentage
+[[battery.display]]
+threshold = 100  # Show always (up to 100%)
+style = "bold green"  # Style for high battery
+[[battery.display]]
+threshold = 30  # Medium battery
+style = "bold yellow"
+[[battery.display]]
+threshold = 10  # Low battery
+style = "bold red"
+
+# Time module: Shows current time (e.g., [23:27:25])
+[time]
+disabled = false  # Enable the module
+time_format = "%H:%M:%S"  # 24-hour format with seconds; e.g., "23:27:25"
+format = "[$time]($style) "  # Format: e.g., "[23:27:25] "
+style = "dimmed white"  # Subtle styling; adjust as needed
+# Note: `disabled_when` is not a valid key; use `time.disabled` or conditions elsewhere if needed
+
+# Prompt format: Left side for main info, right side for battery/time
+# format = """
+# $username\
+# $hostname\
+# $localip\
+# $shlvl\
+# $singularity\
+# $kubernetes\
+# $directory\
+# $vcsh\
+# $fossil_branch\
+# $fossil_metrics\
+# $git_branch\
+# $git_commit\
+# $git_state\
+# $git_metrics\
+# $git_status\
+# $hg_branch\
+# $pijul_channel\
+# $docker_context\
+# $package\
+# $c\
+# $cmake\
+# $cobol\
+# $daml\
+# $dart\
+# $deno\
+# $dotnet\
+# $elixir\
+# $elm\
+# $erlang\
+# $fennel\
+# $gleam\
+# $golang\
+# $guix_shell\
+# $haskell\
+# $haxe\
+# $helm\
+# $java\
+# $julia\
+# $kotlin\
+# $gradle\
+# $lua\
+# $nim\
+# $nodejs\
+# $ocaml\
+# $opa\
+# $perl\
+# $php\
+# $pulumi\
+# $purescript\
+# $python\
+# $quarto\
+# $rlang\
+# $red\
+# $ruby\
+# $rust\
+# $scala\
+# $solidstart\
+# $swift\
+# $terraform\
+# $typoscript\
+# $vlang\
+# $vscode\
+# $zig\
+# $length\
+# $line_break\
+# $jobs\
+# $character"""
+
+

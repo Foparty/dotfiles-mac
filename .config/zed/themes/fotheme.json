@@ -1,0 +1,16 @@
+{
+  "name": "My Cool Theme",
+  "appearance": "dark",
+  "style": {
+    "editor.background": "#1e1e1e",
+    "editor.foreground": "#ffffff",
+    "status_bar.background": "#2e2e2e",
+    "syntax": {
+      "keyword": { "color": "#ff79c6", "font_weight": 600 },
+      "comment": { "color": "#6272a4", "font_style": "italic" },
+      "function": { "color": "#50fa7b", "font_style": "italic" },
+      "string": { "color": "#f1fa8c" },
+      "variable": { "color": "#f8f8f2" }
+    }
+  }
+}

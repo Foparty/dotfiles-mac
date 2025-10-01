@@ -1,0 +1,63 @@
+font-family = "MonaspiceRn Nerd Font Mono"
+# font-family = "JetBrainsMono Nerd Font"
+font-style-bold = "Medium"
+font-style-bold-italic = "Medium Italic"
+font-size = 16
+font-feature = liga
+cursor-color = orange
+
+adjust-cell-width = 0%
+background-opacity = 0.83
+background-blur-radius = 8
+unfocused-split-opacity = 0.50
+
+window-padding-x = 4
+window-padding-y = 4
+window-padding-color = background
+window-padding-balance = true
+window-width = 9999
+window-height = 9999
+macos-titlebar-proxy-icon = visible
+macos-titlebar-style = tabs
+window-decoration = true
+# window-height = 24
+# window-width = 80
+# fullscreen = true
+#
+window-save-state = always
+
+# theme = GruvboxDarkHard
+# theme = nightfox
+theme = Zenbones Dark
+
+quit-after-last-window-closed=true
+
+macos-icon = blueprint
+# macos-titlebar-style = hidden
+macos-option-as-alt = left
+
+confirm-close-surface = false
+quit-after-last-window-closed = true
+shell-integration = zsh
+shell-integration-features = cursor,title
+
+keybind = super+d=new_split:right
+keybind = super+ctrl+d=new_split:down
+keybind = super+x=close_surface
+keybind = super+r=reload_config
+
+keybind = super+j=goto_split:down
+keybind = super+k=goto_split:up
+keybind = super+h=goto_split:left
+keybind = super+l=goto_split:right
+keybind = super+m=toggle_split_zoom
+# keybind = super+.=change_title
+keybind = ctrl+z=toggle_fullscreen
+mouse-hide-while-typing = true
+keybind = super+ctrl+r=prompt_surface_title
+
+# Split Resizing
+keybind = super+alt+ctrl+shift+left=resize_split:left,20
+keybind = super+alt+ctrl+shift+down=resize_split:down,20
+keybind = super+alt+ctrl+shift+up=resize_split:up,20
+keybind = super+alt+ctrl+shift+right=resize_split:right,20

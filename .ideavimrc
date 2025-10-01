@@ -1,0 +1,73 @@
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" Plugins  --------------------------------
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set NERDTree
+set clipboard+=unnamedplus
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set incsearch
+set nu
+
+""" Idea specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+nnoremap <leader>x :source ~/.ideavimrc<CR>
+
+""" Mappings --------------------------------
+map <leader>z <Action>(ToggleDistractionFreeMode)
+
+map <leader>s <Action>(SelectInProjectView)
+map <leader>a <Action>(Annotate)
+map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+map <S-Space> <Action>(GotoNextError)
+
+map <leader>cs <Action>(FileStructurePopup)
+
+map <leader>, <Action>(RecentFiles)
+map <leader><leader> <Action>(GotoFile)
+map <leader>. <Action>(PopupMenuActions)
+map <leader>/ <Action>(FindInPath)
+""" map gd <Action>(GotoDeclaration)
+
+inoremap kj <Esc>:w<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+nnoremap <down> :action SplitHorizontally<CR>
+nnoremap <right> :action SplitVertically<CR>
+nnoremap <up> :action CloseEditor<CR>
+nnoremap <left> :action SaveDocument<CR>
+
+nnoremap <C-]> :action NextTab<CR>
+nnoremap <C-[> :action PreviousTab<CR>
+
+nnoremap <A-j> :action MoveLineDown<CR>
+nnoremap <A-k> :action MoveLineUp<CR>
+
+nnoremap <leader>ca :action ShowIntentionActions<CR>
+""" nnoremap g. :action ShowIntentionActions<CR>
+nnoremap g. :action AIIntentionsActionGroupJS<CR>
+nnoremap cd :action RenameElement<CR>
+nnoremap <leader>cr :action RenameElement<CR>
+
+nnoremap <leader>d :action Vcs.ShowDiffChangedLines<CR>
+nnoremap do :action Vcs.ShowDiffChangedLines<CR>
+
+nnoremap <leader>ll :action EditorToggleShowLineNumbers<CR>

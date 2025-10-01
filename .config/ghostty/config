@@ -9,7 +9,7 @@ cursor-color = orange
 adjust-cell-width = 0%
 background-opacity = 0.83
 background-blur-radius = 8
-unfocused-split-opacity = 0.50
+unfocused-split-opacity = 0.90
 
 window-padding-x = 4
 window-padding-y = 4

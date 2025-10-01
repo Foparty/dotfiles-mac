@@ -76,6 +76,14 @@ alias cd="z"
 
 alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
+dots() {
+  dotfiles add .
+  echo "Enter commit message: "
+  read -r commit_message
+  dotfiles commit -m "$commit_message"
+  dotfiles push -u origin main
+}
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
 eval "$(rbenv init - zsh)"

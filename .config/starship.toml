@@ -1,4 +1,4 @@
-format = '$directory$git_branch$character'
+format = '$directory$git_branch$git_status$character'
 right_format = "$time$battery"
 # Battery module: Shows battery percentage and status (e.g., 🔋 85% or 🔌 Charging)
 [battery]
@@ -27,7 +27,13 @@ time_format = "%H:%M:%S"  # 24-hour format with seconds; e.g., "23:27:25"
 format = "[$time]($style) "  # Format: e.g., "[23:27:25] "
 style = "dimmed white"  # Subtle styling; adjust as needed
 # Note: `disabled_when` is not a valid key; use `time.disabled` or conditions elsewhere if needed
-
+[git_status]
+# Show ahead/behind with commit counts
+ahead = '⇡${count}'
+behind = '⇣${count}'
+diverged = '⇕ ⇡${ahead_count} ⇣${behind_count}'
+format = '([$all_status$ahead_behind]($style) )'
+style = 'bold dimmed green'  # Optional: Customize colors
 # Prompt format: Left side for main info, right side for battery/time
 # format = """
 # $username\

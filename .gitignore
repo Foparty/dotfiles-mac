@@ -1,0 +1,33 @@
+# Ignore everything in home directory by default
+*
+
+# Allow specific files/folders
+!.gitignore
+!.zshrc
+!.ideavimrc
+!.tmux.conf
+!.config/
+.config/*
+!.config/ghostty/
+!.config/btop/
+!.config/karabiner/
+!.config/starship.toml
+!.config/yazi/
+!.config/zed/
+!.config/zellij/
+
+# Additional common exclusions (just in case)
+.DS_Store
+*.pyc
+*.log
+.cache/
+.local/share/*
+Downloads/
+Desktop/
+Documents/
+Music/
+Pictures/
+Videos/
+.ssh/
+.env
+.pacman/
